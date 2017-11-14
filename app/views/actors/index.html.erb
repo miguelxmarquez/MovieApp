@@ -1,0 +1,16 @@
+<div class="main actor-index">
+      <div class="container">
+        <div class="row">
+
+          <% @actors.each do |t| %>
+          <div class="actor col-xs-2">
+            <%= image_tag t.image %>
+            <h3> <%= t.first_name %> <%= t.last_name %> </h3>
+            <p> <%= t.bio %> </p>
+            <%= link_to 'Learn more', actor_path(t) %>
+          </div>
+          <% end %>
+
+      </div>
+</div>
+
